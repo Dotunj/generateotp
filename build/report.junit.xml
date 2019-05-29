@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Application Test Suite" tests="11" assertions="25" errors="0" failures="0" skipped="0" time="4.113795">
+    <testsuite name="OtpFeatureTest" file="/Applications/MAMP/htdocs/generateotp/tests/Feature/OtpFeatureTest.php" tests="6" assertions="16" errors="0" failures="0" skipped="0" time="2.242354">
+      <testcase name="it_can_generate_an_otp_code" class="OtpFeatureTest" classname="OtpFeatureTest" file="/Applications/MAMP/htdocs/generateotp/tests/Feature/OtpFeatureTest.php" line="14" assertions="5" time="0.526505"/>
+      <testcase name="it_returns_the_correct_response_for_an_invalid_otp_code" class="OtpFeatureTest" classname="OtpFeatureTest" file="/Applications/MAMP/htdocs/generateotp/tests/Feature/OtpFeatureTest.php" line="32" assertions="2" time="0.305959"/>
+      <testcase name="it_returns_the_correct_response_for_a_valid_otp_code" class="OtpFeatureTest" classname="OtpFeatureTest" file="/Applications/MAMP/htdocs/generateotp/tests/Feature/OtpFeatureTest.php" line="44" assertions="3" time="0.335755"/>
+      <testcase name="it_returns_the_correct_response_for_an_unauthorized_initiator" class="OtpFeatureTest" classname="OtpFeatureTest" file="/Applications/MAMP/htdocs/generateotp/tests/Feature/OtpFeatureTest.php" line="62" assertions="2" time="0.301854"/>
+      <testcase name="it_returns_the_correct_response_for_an_otp_code_that_has_been_validated" class="OtpFeatureTest" classname="OtpFeatureTest" file="/Applications/MAMP/htdocs/generateotp/tests/Feature/OtpFeatureTest.php" line="76" assertions="2" time="0.314954"/>
+      <testcase name="it_returns_the_correct_response_for_an_otp_code_that_has_expired" class="OtpFeatureTest" classname="OtpFeatureTest" file="/Applications/MAMP/htdocs/generateotp/tests/Feature/OtpFeatureTest.php" line="90" assertions="2" time="0.457327"/>
+    </testsuite>
+    <testsuite name="OtpTest" file="/Applications/MAMP/htdocs/generateotp/tests/Unit/OtpTest.php" tests="5" assertions="9" errors="0" failures="0" skipped="0" time="1.871441">
+      <testcase name="it_can_create_an_otp" class="OtpTest" classname="OtpTest" file="/Applications/MAMP/htdocs/generateotp/tests/Unit/OtpTest.php" line="14" assertions="2" time="0.422789"/>
+      <testcase name="it_can_determine_when_an_otp_has_expired" class="OtpTest" classname="OtpTest" file="/Applications/MAMP/htdocs/generateotp/tests/Unit/OtpTest.php" line="26" assertions="2" time="0.347114"/>
+      <testcase name="it_can_determine_whether_an_otp_has_been_used_or_not" class="OtpTest" classname="OtpTest" file="/Applications/MAMP/htdocs/generateotp/tests/Unit/OtpTest.php" line="38" assertions="2" time="0.347749"/>
+      <testcase name="it_can_invalidate_an_otp_code" class="OtpTest" classname="OtpTest" file="/Applications/MAMP/htdocs/generateotp/tests/Unit/OtpTest.php" line="50" assertions="1" time="0.372792"/>
+      <testcase name="it_can_determine_the_initiator_for_an_otp_code" class="OtpTest" classname="OtpTest" file="/Applications/MAMP/htdocs/generateotp/tests/Unit/OtpTest.php" line="60" assertions="2" time="0.380997"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

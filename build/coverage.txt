@@ -1,0 +1,18 @@
+
+
+Code Coverage Report:    
+  2019-05-26 13:51:23    
+                         
+ Summary:                
+  Classes: 33.33% (4/12) 
+  Methods: 50.00% (13/26)
+  Lines:   62.96% (34/54)
+
+\App::App\Otp
+  Methods: 100.00% ( 5/ 5)   Lines: 100.00% (  8/  8)
+\App\Console::App\Console\Kernel
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  1/  1)
+\App\Http\Controllers::App\Http\Controllers\OtpController
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 20/ 20)
+\App\Traits::HasJsonResponse
+  Methods: 100.00% ( 5/ 5)   Lines: 100.00% (  5/  5)
