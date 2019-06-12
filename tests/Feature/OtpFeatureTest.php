@@ -1,10 +1,9 @@
 <?php
 
-use Laravel\Lumen\Testing\DatabaseMigrations;
-use Laravel\Lumen\Testing\DatabaseTransactions;
-use App\Traits\HasJsonResponse;
 use App\Otp;
 use Carbon\Carbon;
+use App\Traits\HasJsonResponse;
+use Laravel\Lumen\Testing\DatabaseMigrations;
 
 class OtpFeatureTest extends TestCase
 {
@@ -33,7 +32,7 @@ class OtpFeatureTest extends TestCase
     {
         $attributes = [
             'code' => 154637,
-            'initiator' => 123456
+            'initiator' => 123456,
         ];
 
         $this->json('POST', route('validate.otp', $attributes))
@@ -49,7 +48,7 @@ class OtpFeatureTest extends TestCase
 
         $attributes = [
             'code' => $otp->code,
-            'initiator' => $initiatorId
+            'initiator' => $initiatorId,
         ];
 
         $this->json('POST', route('validate.otp', $attributes))
@@ -65,7 +64,7 @@ class OtpFeatureTest extends TestCase
 
         $attributes = [
             'code' => $otp->code,
-            'initiator' => 123456
+            'initiator' => 123456,
         ];
 
         $this->json('POST', route('validate.otp', $attributes))
@@ -79,7 +78,7 @@ class OtpFeatureTest extends TestCase
 
         $attributes = [
             'code' => $otp->code,
-            'initiator' => $otp->initiator_id
+            'initiator' => $otp->initiator_id,
         ];
 
         $this->json('POST', route('validate.otp', $attributes))
@@ -93,7 +92,7 @@ class OtpFeatureTest extends TestCase
 
         $attributes = [
             'code' => $otp->code,
-            'initiator' => $otp->initiator_id
+            'initiator' => $otp->initiator_id,
         ];
 
         Carbon::setTestNow(Carbon::now()->addMinutes(11));
@@ -101,5 +100,4 @@ class OtpFeatureTest extends TestCase
         $this->json('POST', route('validate.otp', $attributes))
              ->seeJson($this->expiredOtp());
     }
-    
 }

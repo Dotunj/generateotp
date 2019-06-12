@@ -13,7 +13,6 @@ use Carbon\Carbon;
 |
 */
 
-
 $factory->define(App\Otp::class, function () {
     return [
         'initiator_id' => str_random(),

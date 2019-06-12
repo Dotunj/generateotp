@@ -8,7 +8,7 @@ trait HasJsonResponse
     {
         return [
             'status' => false,
-            'message' => 'Invalid Otp'
+            'message' => 'Invalid Otp',
         ];
     }
 
@@ -16,7 +16,7 @@ trait HasJsonResponse
     {
         return [
             'status' => false,
-            'message' => 'Otp has expired'
+            'message' => 'Otp has expired',
         ];
     }
 
@@ -24,7 +24,7 @@ trait HasJsonResponse
     {
         return [
             'status' => false,
-            'message' => 'Otp has been used already'
+            'message' => 'Otp has been used already',
         ];
     }
 
@@ -32,7 +32,7 @@ trait HasJsonResponse
     {
         return [
             'status' => true,
-            'message' => 'Otp has been verified'
+            'message' => 'Otp has been verified',
         ];
     }
 
@@ -40,7 +40,7 @@ trait HasJsonResponse
     {
         return [
             'status' => false,
-            'message' => 'Not Authorized to use this otp'
+            'message' => 'Not Authorized to use this otp',
         ];
     }
 }

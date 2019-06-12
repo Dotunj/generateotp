@@ -1,14 +1,12 @@
 <?php
 
-use Laravel\Lumen\Testing\DatabaseMigrations;
-use Laravel\Lumen\Testing\DatabaseTransactions;
 use App\Otp;
 use Carbon\Carbon;
+use Laravel\Lumen\Testing\DatabaseMigrations;
 
 class OtpTest extends TestCase
 {
     use DatabaseMigrations;
-
 
     /** @test */
     public function it_can_create_an_otp()
@@ -30,7 +28,7 @@ class OtpTest extends TestCase
         $this->assertFalse($otp->hasExpired());
 
         Carbon::setTestNow($this->addMinutes());
-        
+
         $this->assertTrue($otp->hasExpired());
     }
 
