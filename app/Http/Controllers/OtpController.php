@@ -13,7 +13,7 @@ class OtpController extends Controller
     public function generate(Request $request, Otp $otp)
     {
         $this->validate($request, [
-            'initiator_id' => 'required|alpha_num|max:200'
+            'initiator_id' => 'required|alpha_num|max:200',
         ]);
 
         $initiatorId = $request->input('initiator_id');
@@ -24,7 +24,7 @@ class OtpController extends Controller
             'status' => true,
             'initiator_id' => $otp->initiator_id,
             'code' => $otp->code,
-            'expires_in' => $otp->expiry_date
+            'expires_in' => $otp->expiry_date,
         ];
 
         return response()->json($result, 201);
@@ -34,19 +34,19 @@ class OtpController extends Controller
     {
         $otp = Otp::whereCode($code)->first();
 
-        if(! $otp){
+        if (! $otp) {
             return response()->json($this->invalidOtp(), 200);
         }
 
-        if(! $otp->isInitiatorAuthorized($initiator)){
+        if (! $otp->isInitiatorAuthorized($initiator)) {
             return response()->json($this->unauthorizedInitiator(), 200);
         }
 
-        if($otp->hasBeenValidated()){
+        if ($otp->hasBeenValidated()) {
             return response()->json($this->validatedOtp(), 200);
         }
 
-        if($otp->hasExpired()){
+        if ($otp->hasExpired()) {
             return response()->json($this->expiredOtp(), 200);
         }
 
@@ -54,5 +54,4 @@ class OtpController extends Controller
 
         return response()->json($this->validOtp(), 200);
     }
-
 }

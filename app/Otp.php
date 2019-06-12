@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
 
 class Otp extends Model
 {
@@ -15,7 +15,7 @@ class Otp extends Model
 
     protected $casts = [
         'initiator_id' => 'string',
-        'code' => 'int'
+        'code' => 'int',
     ];
 
     public function generate($initiatorId)
