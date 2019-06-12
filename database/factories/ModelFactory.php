@@ -13,14 +13,8 @@ use Carbon\Carbon;
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
-    return [
-        'name' => $faker->name,
-        'email' => $faker->email,
-    ];
-});
 
-$factory->define(App\Otp::class, function (Faker\Generator $faker) {
+$factory->define(App\Otp::class, function () {
     return [
         'initiator_id' => str_random(),
         'code' => mt_rand(100000, 300000),
