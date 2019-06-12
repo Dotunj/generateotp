@@ -1,12 +1,11 @@
 language: php
 
 php:
-  - 7.1
   - 7.2
-  - 7.3
 
 before_script:
-  - travis_retry composer install --no-interaction --prefer-source
+  - composer install --no-interaction  
+  - php artisan key:generate
 
 script:
   - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
