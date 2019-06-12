@@ -7,7 +7,7 @@
 GenerateOTP is a simple service that allows you to generate and validate OTP code
 
 ## Official Documentation
-Documentation can be found on the [Generate OTP website](https://lumen.laravel.com/docs).
+Documentation can be found on the [GenerateOTP website](https://www.generateotp.com/).
 
 
 ## License
