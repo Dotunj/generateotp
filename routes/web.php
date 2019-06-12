@@ -11,9 +11,9 @@
 |
 */
 
-// $router->get('/', function () use ($router) {
-//     return $router->app->version();
-// });
+$router->get('/', function () use ($router) {
+    return $router->app->version();
+});
 
 $router->post('/validate/{code}/{initiator}', ['as' => 'validate.otp', 'uses' => 'OtpController@validateOtp']);
 $router->post('/generate', ['as' => 'generate.otp', 'uses' => 'OtpController@generate']);
