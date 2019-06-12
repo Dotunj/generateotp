@@ -1,7 +1,7 @@
 # GenerateOTP
 
 [![Build Status](https://travis-ci.org/Dotunj/generateotp.svg?branch=master)](https://travis-ci.org/Dotunj/generateotp)
-[![Code Coverage](https://scrutinizer-ci.com/g/Dotunj/generateotp/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Dotunj/generateotp/?branch=master)
+[![StyleCI](https://github.styleci.io/repos/189295247/shield?branch=master)]
 
 
 GenerateOTP is a simple service that allows you to generate and validate OTP code
