@@ -1,4 +1,4 @@
-# Lumen PHP Framework
+# GenerateOTP
 
 [![Build Status](https://travis-ci.org/Dotunj/generateotp.svg?branch=master)](https://travis-ci.org/Dotunj/generateotp)
 [![Code Coverage](https://scrutinizer-ci.com/g/Dotunj/generateotp/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Dotunj/generateotp/?branch=master)
